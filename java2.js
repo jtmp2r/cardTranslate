@@ -1,25 +1,29 @@
 var Holiday = (function () {
 	var langGer = {
      "merry":"Frohe", 
-     var xmas = "christmas":"Weihnachten"; 
-     var und = "and":"und"; 
-     var expression = "happy":"ein glückliches"; 
-     var news = "new":"neues";
-     var 12mons = "year":"Jahr";     
-};
+    "christmas":"Weihnachten",
+     "and":"und", 
+      "happy":"ein glückliches",
+     "new":"neues","year":"Jahr"     
+	};
 
 	return {
-		translateTo: new Word(german),
-		getLangGer: function() {
-			return langGer; 
-		},
+		getLangGer: function(words) {
+			// console.log(langGer[words]);
+			var newWords = words.split(" ")
+			var finalWords = [];
+			for (var i = 0; i < newWords.length; i++) {
+				finalWords.push(langGer[newWords[i]])
+	 			
+			}
+
+			return finalWords.join(" ");
 
 
 
 
 
-
-
+		}	
 	}
 
 
